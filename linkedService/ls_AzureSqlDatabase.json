@@ -1,0 +1,23 @@
+{
+	"name": "ls_AzureSqlDatabase",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "care-health.database.windows.net",
+			"database": "sql-db-carehealth",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "narendra",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "sqldb-password"
+			}
+		}
+	}
+}
