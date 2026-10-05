@@ -12,7 +12,15 @@
 					"type": "LinkedServiceReference"
 				},
 				"secretName": "databricks-adf"
-			}
+			},
+			"newClusterNodeType": "Standard_D4s_v5",
+			"newClusterNumOfWorker": "1",
+			"newClusterSparkEnvVars": {
+				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
+			},
+			"newClusterVersion": "16.4.x-scala2.13",
+			"clusterOption": "Fixed",
+			"newClusterInitScripts": []
 		}
 	}
 }
